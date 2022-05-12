@@ -1,0 +1,23 @@
+export const images = {
+    genres: {
+        action: require("../../assets/genres/action.jpg"),
+        adventure: require("../../assets/genres/adventure.jpg"),
+        animation: require("../../assets/genres/animation.jpg"),
+        comedy: require("../../assets/genres/comedy.jpg"),
+        crime: require("../../assets/genres/crime.jpg"),
+        documentary: require("../../assets/genres/documentary.jpg"),
+        drama: require("../../assets/genres/drama.jpg"),
+        family: require("../../assets/genres/family.jpg"),
+        fantasy: require("../../assets/genres/action.jpg"),
+        history: require("../../assets/genres/history.jpg"),
+        horror: require("../../assets/genres/horror.jpg"),
+        music: require("../../assets/genres/music.jpg"),
+        mystery: require("../../assets/genres/mystery.jpg"),
+        romance: require("../../assets/genres/romance.jpg"),
+        scifi: require("../../assets/genres/sci-fi.jpg"),
+        thriller: require("../../assets/genres/thriller.jpg"),
+        tvmovie: require("../../assets/genres/tvmovie.jpg"),
+        war: require("../../assets/genres/war.jpg"),
+        western: require("../../assets/genres/western.jpg"),
+    },
+};
