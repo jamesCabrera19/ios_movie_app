@@ -30,7 +30,7 @@ function App() {
     const scheme = useColorScheme();
 
     const MyTheme = {
-        dark: scheme === "light" ? DefaultTheme : DarkTheme,
+        // dark: scheme === "light" ? DefaultTheme : DarkTheme,
         colors: {
             authBackground: "rgb(62, 66, 76)",
             primary: "rgb(255, 45, 85)", // red-pink

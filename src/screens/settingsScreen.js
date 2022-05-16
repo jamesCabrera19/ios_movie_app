@@ -37,14 +37,6 @@ export default function SettingsScreen({ navigation }) {
         }
     };
 
-    const styles = {
-        container: {
-            alignItems: "center",
-            justifyContent: "center",
-        },
-        image: { height: 100, width: 100, borderRadius: 50 },
-    };
-
     let index = 0;
     const data = [
         {
@@ -61,6 +53,14 @@ export default function SettingsScreen({ navigation }) {
         // etc...
         // Can also add additional custom keys which are passed to the onChange callback
     ];
+
+    const styles = {
+        container: {
+            alignItems: "center",
+            justifyContent: "center",
+        },
+        image: { height: 100, width: 100, borderRadius: 50 },
+    };
 
     return (
         <View style={[styles.container, { flex: 1 }]}>
@@ -123,12 +123,9 @@ export default function SettingsScreen({ navigation }) {
                 </Text>
                 <ModalSelector
                     touchableStyle={{
-                        borderColor: "black",
                         borderWidth: 0,
                         borderRadius: 3,
-                        color: "black",
                         fontSize: 18,
-                        // backgroundColor: "red",
                     }}
                     data={data}
                     initValue={maxResults.toString()}
@@ -159,7 +156,7 @@ export default function SettingsScreen({ navigation }) {
                     height: 50,
                 }}
             >
-                <Text style={{ color: "black", fontSize: 18 }}>{"theme"}</Text>
+                <Text style={{ color: "grey", fontSize: 18 }}>{"theme"}</Text>
             </View>
 
             <Spacer />

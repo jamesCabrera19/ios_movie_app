@@ -16,7 +16,7 @@ const authReducer = (state, action) => {
         case "logout":
             return { token: null, credits: 0, email: null, errorMessage: "" };
         case "add_error":
-            return { ...state, errorMessage: action.payload };
+            return { ...state, errorMessage: "something went wrong" };
         case "remove_error":
             return { ...state, errorMessage: null };
         case "loading":
@@ -41,10 +41,9 @@ const addCredits = (dispatch) => async (user) => {
         dispatch({ type: "login", payload: res.data });
         dispatch({ type: "loading", payload: "done" }); //! loader
     } catch (error) {
-        dispatch({
-            type: "add_error",
-            payload: "Something went wrong =(",
-        });
+        console.log("response: ", error);
+
+        dispatch({ type: "add_error" });
     }
 };
 

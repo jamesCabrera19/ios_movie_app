@@ -44,13 +44,17 @@ export default function AddCredits({ navigation }) {
                             credits,
                         };
                         addCredits(user);
-
-                        if (!state.errorMessage || state.loading === "done") {
-                            navigation.navigate("NativeStack", {
-                                screen: "PurchaseScreen",
-                                params: { credits: credits },
-                            });
-                        }
+                        // console.log(state.errorMessage);
+                        // if (state.errorMessage) {
+                        //     console.log(
+                        //         "state.errorMessage: ",
+                        //         state.errorMessage
+                        //     );
+                        //     // navigation.navigate("NativeStack", {
+                        //     //     screen: "PurchaseScreen",
+                        //     //     params: { credits: credits },
+                        //     // });
+                        // }
                     },
                 },
             ],
