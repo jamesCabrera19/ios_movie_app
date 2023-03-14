@@ -22,10 +22,10 @@ function App() {
     const { fetchMovies, fetchGenres, renderResult } =
         useContext(MovieDataContext);
     const { addMovies } = useContext(MovieActionContext);
-    const {
-        state: { token, userMovies },
-        autoSignin,
-    } = useContext(AuthContext);
+    // const {
+    //     state: { token, userMovies },
+    //     autoSignin,
+    // } = useContext(AuthContext);
 
     const scheme = useColorScheme();
 
@@ -57,14 +57,21 @@ function App() {
         renderResult(11);
         fetchMovies();
         fetchGenres();
-    }, [userMovies]); // runs as expected
+    }, []); // runs as expected
 
-    useEffect(() => {
-        addMovies(userMovies); // appeding User Saved Movies (movies stored in db) to local state
-    }, [userMovies]); // runs only when userMovies changes
+    // useEffect(() => {
+    //     addMovies(userMovies); // appeding User Saved Movies (movies stored in db) to local state
+    // }, [userMovies]); // runs only when userMovies changes
     return (
         <NavigationContainer theme={MyTheme}>
-            {token ? (
+            <Stack.Navigator>
+                <Stack.Screen
+                    name="AppTabsScreen"
+                    component={MyTabs}
+                    options={{ headerShown: false }}
+                />
+            </Stack.Navigator>
+            {/* {token ? (
                 <Stack.Navigator>
                     <Stack.Screen
                         name="AppTabsScreen"
@@ -74,7 +81,7 @@ function App() {
                 </Stack.Navigator>
             ) : (
                 <AuthStack />
-            )}
+            )} */}
         </NavigationContainer>
     );
 }
