@@ -14,7 +14,7 @@ Please note that this app is specifically designed for iOS devices.
 
 ## Update Status
 
-- Last Updated: app was updated 2 years ago 
+- Last Updated: app was last updated in 2021. 
 - Node.js Authentication Server: Currently down. The app will not have authentication functionality until the server is back online.
 - To ensure the functionality of video playback, I have temporarily disabled authentication within the code.
 
